@@ -11,13 +11,12 @@ trigger_ready = True
 
 def photoEvent():
  	global trigger_ready
-	i = datetime.datetime.now()
-	filename = i.isoformat()
-	cmd = 'raspistill -o ./photos/' + filename + '.jpg -t 2000'
+	filename = datetime.datetime.now().strftime("%m%d%Y-%H%M%S")
+	cmd = 'raspivid -hf -t 5000 -o ./videos/' + filename + '.h264 && MP4Box -add ./videos/' + filename + '.h264 ./videos/' + filename + '.mp4'
 	
 	if trigger_ready:
 		trigger_ready = False
-		print ("clicked" + filename)
+		print ("clicked " + filename)
 		pid = subprocess.call(cmd, shell=True)
 
 while 1:
