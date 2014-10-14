@@ -2,9 +2,9 @@
 ```sudo apt-get update```
 ```sudo apt-get install gpac```
 
-Usage
+####Usage
 ```MP4Box -add filename.h264 filename.mp4```
 
-### to run app
+### run app
 ```sudo python photoboard.py```
 
