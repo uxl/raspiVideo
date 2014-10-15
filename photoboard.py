@@ -13,11 +13,12 @@ def photoEvent():
  	global trigger_ready
 	filename = datetime.datetime.now().strftime("%m%d%Y-%H%M%S")
 	cmd = 'raspivid -hf -t 5000 -o ./videos/' + filename + '.h264 && MP4Box -add ./videos/' + filename + '.h264 ./videos/' + filename + '.mp4'
-	
+
 	if trigger_ready:
 		trigger_ready = False
 		print ("clicked " + filename)
-		pid = subprocess.call(cmd, shell=True)
+		pid = subprocess.check_call(cmd, shell=True)
+		
 
 while 1:
 	if GPIO.input(11):
@@ -29,3 +30,5 @@ while 1:
 		GPIO.output(13, True)
 		#print "not clicked"
 		trigger_ready = True	
+
+
