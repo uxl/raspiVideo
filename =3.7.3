@@ -1,0 +1,33 @@
+Downloading/unpacking pubnub
+  Downloading pubnub-3.7.3.tar.gz
+  Running setup.py egg_info for package pubnub
+    
+Downloading/unpacking pycrypto>=2.6.1 (from pubnub)
+  Running setup.py egg_info for package pycrypto
+    
+Requirement already satisfied (use --upgrade to upgrade): requests>=2.4.0 in /usr/local/lib/python2.7/dist-packages (from pubnub)
+Installing collected packages: pubnub, pycrypto
+  Running setup.py install for pubnub
+    error: /usr/local/lib/python2.7/dist-packages/pubnub.py: Permission denied
+    Complete output from command /usr/bin/python -c "import setuptools;__file__='/home/pi/labCamera/build/pubnub/setup.py';exec(compile(open(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --single-version-externally-managed --record /tmp/pip-9G2LPe-record/install-record.txt:
+    running install
+
+running build
+
+running build_py
+
+creating build
+
+creating build/lib.linux-armv6l-2.7
+
+copying pubnub.py -> build/lib.linux-armv6l-2.7
+
+running install_lib
+
+copying build/lib.linux-armv6l-2.7/pubnub.py -> /usr/local/lib/python2.7/dist-packages
+
+error: /usr/local/lib/python2.7/dist-packages/pubnub.py: Permission denied
+
+----------------------------------------
+Command /usr/bin/python -c "import setuptools;__file__='/home/pi/labCamera/build/pubnub/setup.py';exec(compile(open(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --single-version-externally-managed --record /tmp/pip-9G2LPe-record/install-record.txt failed with error code 1 in /home/pi/labCamera/build/pubnub
+Storing complete log in /home/pi/.pip/pip.log
