@@ -18,17 +18,17 @@ def photoEvent():
 		trigger_ready = False
 		print ("clicked " + filename)
 		pid = subprocess.check_call(cmd, shell=True)
-		
+
 
 while 1:
 	if GPIO.input(11):
-		GPIO.output(13, False)
+		GPIO.output(13, True)
 		if trigger_ready:
 			photoEvent()
 			trigger_ready = False
 	else:
-		GPIO.output(13, True)
+		GPIO.output(13, False)
 		#print "not clicked"
-		trigger_ready = True	
+		trigger_ready = True
 
 
